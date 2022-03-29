@@ -222,12 +222,13 @@ def train(model, args):
             else:
                 loss = None
             # loss /= args.gradient_accumulation_step
+            optimizer.zero_grad()
             loss.backward()
             step += 1
             if step % args.gradient_accumulation_step == 0:
                 nn.utils.clip_grad_norm_(model.parameters(), args.max_grad_norm)
                 optimizer.step()
-                scheduler.step()
+                # scheduler.step()
                 model.zero_grad()
             if step % args.report_step == 0:
                 corrcoef = evaluate(model, dev_loader, args.do_eval_mlp)
