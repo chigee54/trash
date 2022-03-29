@@ -1,4 +1,4 @@
-# Reproduce of simcse, cosent, dcpcse
+# Reproduce of simcse, cosent, dcpcse and scd.
 # STS results of dcpcse as follows:
 # +-------+-------+-------+-------+-------+--------------+-----------------+-------+
 # | STS12 | STS13 | STS14 | STS15 | STS16 | STSBenchmark | SICKRelatedness |  Avg. |
