@@ -198,6 +198,7 @@ def train(model, args):
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
     dev_dataset = PrepareDataset(args, tokenizer, 'dev')
     dev_loader = DataLoader(dev_dataset, batch_size=args.batch_size, shuffle=True)
+    # 换成普通的优化器有时效果更好：optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
     optimizer, scheduler = scheduler_with_optimizer(model, train_loader, args)
     best = 0
     for epoch in range(args.num_epochs):
