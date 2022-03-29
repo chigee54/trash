@@ -8,24 +8,24 @@
 
 
 import os
-import argparse
 import time
-import pickle
 import torch
-from evaluation_ease import do_senteval
-import torch.nn.functional as F
+import pickle
 import random
-import pandas as pd
+import einops
+import argparse
 import numpy as np
+import pandas as pd
+from tqdm import tqdm
 from os.path import join
 from loguru import logger
-import einops
-from tqdm import tqdm
+import torch.nn.functional as F
+from scipy.stats import spearmanr
+from evaluation_ease import do_senteval
 from torch.utils.data import Dataset, DataLoader
+from torch.utils.tensorboard import SummaryWriter
 from transformers import BertTokenizer, AdamW, get_linear_schedule_with_warmup
 from Custom_model import Custom_Model, simcse_unsup_loss, cosent_unsup_loss, SCD_Loss
-from scipy.stats import spearmanr
-from torch.utils.tensorboard import SummaryWriter
 
 
 def main():
