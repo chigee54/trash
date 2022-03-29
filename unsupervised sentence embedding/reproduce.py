@@ -21,7 +21,7 @@ from os.path import join
 from loguru import logger
 import torch.nn.functional as F
 from scipy.stats import spearmanr
-from evaluation_ease import do_senteval
+from evaluation import do_senteval
 from torch.utils.data import Dataset, DataLoader
 from torch.utils.tensorboard import SummaryWriter
 from transformers import BertTokenizer, AdamW, get_linear_schedule_with_warmup
