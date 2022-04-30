@@ -14,7 +14,7 @@ import einops
 from tqdm import tqdm
 from torch.utils.data import Dataset, DataLoader
 from transformers import BertTokenizer, AdamW, get_linear_schedule_with_warmup, BertForMaskedLM
-from custom_model_prefix import Custom_Model, simcse_unsup_loss, cosent_loss, SCD_Loss, simcse_sup_loss, SNCSE_loss, prompt_loss
+from 2_custom_model import Custom_Model, simcse_unsup_loss, cosent_loss, SCD_Loss, simcse_sup_loss, SNCSE_loss, prompt_loss
 # from Custom_model import Custom_Model, simcse_unsup_loss, cosent_loss, SCD_Loss, simcse_sup_loss
 from scipy.stats import spearmanr
 from torch.utils.tensorboard import SummaryWriter
