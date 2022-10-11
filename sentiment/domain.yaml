@@ -1,0 +1,13 @@
+
+food:
+  - price
+  - taste
+  - nutrition
+  - brand
+
+clothing:
+  - price
+  - brand
+  - quality
+  - material
+  - style
